@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
+import { NextPage } from "next";
 
 const WinePage: NextPage = () => {
   return (
     <div>
-      <h1>hello</h1>
+      <h1>Wine Page</h1>
     </div>
   )
 }
