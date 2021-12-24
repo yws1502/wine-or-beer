@@ -5,11 +5,10 @@ import { BeerContainer } from "../../components";
 const StoutsBeerPage : NextPage = () => {
   const name = "stouts";
   return (
-    <div>
-      <BeerContainer 
-        name={name}
-      />
-    </div>
+    <main>
+      <h2>{name} beer</h2>
+      <BeerContainer name={name}/>
+    </main>
   )
 }
 

@@ -13,7 +13,7 @@ export const WineContainer = ({name} : WineContainerProps) => {
   if (!data) return <Loading />;
 
   return (
-    <main>
+    <div>
       {data.map((wineData: Wine) => {
         return (
           <WineCard 
@@ -22,6 +22,6 @@ export const WineContainer = ({name} : WineContainerProps) => {
           />
         )
       })}
-    </main>
+    </div>
   )
 }

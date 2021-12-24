@@ -5,10 +5,10 @@ const PortWinePage: NextPage = () => {
   const name = 'port';
 
   return (
-    <div>
+    <main>
       <h1>{name} wine</h1>
       <WineContainer name={name} />
-    </div>
+    </main>
   )
 }
 

@@ -5,9 +5,10 @@ const RedsWinePage: NextPage = () => {
   const name = 'reds';
 
   return (
-    <div>
+    <main>
+      <h1>{name} Wine</h1>
       <WineContainer name={name}/>
-    </div>
+    </main>
   )
 }
 
