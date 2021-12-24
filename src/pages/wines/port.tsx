@@ -6,7 +6,6 @@ const PortWinePage: NextPage = () => {
 
   return (
     <main>
-      <h1>{name} wine</h1>
       <WineContainer name={name} />
     </main>
   )

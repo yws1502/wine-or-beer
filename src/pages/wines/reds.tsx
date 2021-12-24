@@ -6,7 +6,6 @@ const RedsWinePage: NextPage = () => {
 
   return (
     <main>
-      <h1>{name} Wine</h1>
       <WineContainer name={name}/>
     </main>
   )
