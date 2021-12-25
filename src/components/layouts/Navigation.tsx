@@ -1,12 +1,6 @@
-import Link from "next/link";
+import { Menu } from ".";
 import { ROUTES } from "../../constants";
-
-interface ROUTE {
-  ID: number,
-  PATH: string,
-  LABEL: string,
-  SUBS?: Array<ROUTE>,
-}
+import { ROUTE } from "../../types/ROUTE";
 
 export const Navigation = () => {
   return (
@@ -15,23 +9,11 @@ export const Navigation = () => {
       <nav>
         <ul>
           {ROUTES.map((routeObject: ROUTE) => {
-            return (
-              <li key={`menu-list-${routeObject.ID}`}>
-                <Link href={routeObject.PATH}>
-                  <a>{routeObject.LABEL}</a>
-                </Link>
-                <ul>
-                  {routeObject.SUBS && routeObject.SUBS.map((subRouteObject: ROUTE) => {
-                    return (
-                      <li>
-                        <Link href={`${routeObject.PATH}${subRouteObject.PATH}`}>
-                          <a>{subRouteObject.LABEL}</a>
-                        </Link>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </li>
+            return(
+              <Menu 
+                key={`menu-list-${routeObject.ID}`}
+                routeObject={routeObject}
+              />
             )
           })}
         </ul>
